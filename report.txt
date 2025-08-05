@@ -1,0 +1,186 @@
+benchmarks/acasxu/ACASXU_run2a_1_1_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_2_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_3_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_4_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_5_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_6_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_7_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_8_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_9_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_1_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_2_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_3_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_4_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_5_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_6_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_7_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_8_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_9_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_1_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_2_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_3_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_4_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_5_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_6_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_7_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_8_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_9_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_1_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_2_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_3_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_4_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_5_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_6_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_7_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_8_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_9_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_1_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_2_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_3_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_4_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_5_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_6_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_7_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_8_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_9_batch_2000.onnx,benchmarks/acasxu/prop_1.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_1_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_2_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 105.3432
+benchmarks/acasxu/ACASXU_run2a_1_3_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_4_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 7.4883
+benchmarks/acasxu/ACASXU_run2a_1_5_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_6_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_7_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_8_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_9_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_1_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.2615
+benchmarks/acasxu/ACASXU_run2a_2_2_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.742
+benchmarks/acasxu/ACASXU_run2a_2_3_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.6871
+benchmarks/acasxu/ACASXU_run2a_2_4_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.2409
+benchmarks/acasxu/ACASXU_run2a_2_5_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0319
+benchmarks/acasxu/ACASXU_run2a_2_6_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.2592
+benchmarks/acasxu/ACASXU_run2a_2_7_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.1243
+benchmarks/acasxu/ACASXU_run2a_2_8_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0874
+benchmarks/acasxu/ACASXU_run2a_2_9_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 6.6325
+benchmarks/acasxu/ACASXU_run2a_3_1_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0611
+benchmarks/acasxu/ACASXU_run2a_3_2_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 27.6879
+benchmarks/acasxu/ACASXU_run2a_3_3_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_4_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.1426
+benchmarks/acasxu/ACASXU_run2a_3_5_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0815
+benchmarks/acasxu/ACASXU_run2a_3_6_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.3158
+benchmarks/acasxu/ACASXU_run2a_3_7_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 17.0802
+benchmarks/acasxu/ACASXU_run2a_3_8_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.2946
+benchmarks/acasxu/ACASXU_run2a_3_9_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0529
+benchmarks/acasxu/ACASXU_run2a_4_1_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.7293
+benchmarks/acasxu/ACASXU_run2a_4_2_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_3_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0956
+benchmarks/acasxu/ACASXU_run2a_4_4_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.7254
+benchmarks/acasxu/ACASXU_run2a_4_5_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0589
+benchmarks/acasxu/ACASXU_run2a_4_6_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0328
+benchmarks/acasxu/ACASXU_run2a_4_7_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.2832
+benchmarks/acasxu/ACASXU_run2a_4_8_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0572
+benchmarks/acasxu/ACASXU_run2a_4_9_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 3.3737
+benchmarks/acasxu/ACASXU_run2a_5_1_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.2095
+benchmarks/acasxu/ACASXU_run2a_5_2_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.727
+benchmarks/acasxu/ACASXU_run2a_5_3_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_4_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0584
+benchmarks/acasxu/ACASXU_run2a_5_5_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0647
+benchmarks/acasxu/ACASXU_run2a_5_6_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0811
+benchmarks/acasxu/ACASXU_run2a_5_7_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0248
+benchmarks/acasxu/ACASXU_run2a_5_8_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.3066
+benchmarks/acasxu/ACASXU_run2a_5_9_batch_2000.onnx,benchmarks/acasxu/prop_2.vnnlib,violated, 0.0228
+benchmarks/acasxu/ACASXU_run2a_1_1_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_2_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_3_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_4_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_5_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_6_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_7_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,violated, 0.0137
+benchmarks/acasxu/ACASXU_run2a_1_8_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,violated, 0.0144
+benchmarks/acasxu/ACASXU_run2a_1_9_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,violated, 0.0154
+benchmarks/acasxu/ACASXU_run2a_2_1_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_2_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_3_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_4_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_5_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_6_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_7_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_8_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_9_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_1_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_2_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_3_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_4_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_5_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_6_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_7_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_8_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_9_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_1_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_2_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_3_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_4_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_5_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_6_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_7_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_8_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_9_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_1_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_2_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_3_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_4_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_5_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_6_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_7_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_8_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_9_batch_2000.onnx,benchmarks/acasxu/prop_3.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_1_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_2_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_3_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_4_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_5_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_6_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_7_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,violated, 0.0138
+benchmarks/acasxu/ACASXU_run2a_1_8_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,violated, 0.014
+benchmarks/acasxu/ACASXU_run2a_1_9_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,violated, 0.0137
+benchmarks/acasxu/ACASXU_run2a_2_1_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_2_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_3_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_4_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_5_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_6_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_7_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_8_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_9_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_1_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_2_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_3_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_4_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_5_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_6_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_7_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_8_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_3_9_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_1_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_2_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_3_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_4_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_5_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_6_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_7_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_8_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_9_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_1_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_2_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_3_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_4_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_5_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_6_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_7_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_8_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_5_9_batch_2000.onnx,benchmarks/acasxu/prop_4.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_1_batch_2000.onnx,benchmarks/acasxu/prop_5.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_1_batch_2000.onnx,benchmarks/acasxu/prop_6.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_1_9_batch_2000.onnx,benchmarks/acasxu/prop_7.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_2_9_batch_2000.onnx,benchmarks/acasxu/prop_8.vnnlib,violated, 89.6927
+benchmarks/acasxu/ACASXU_run2a_3_3_batch_2000.onnx,benchmarks/acasxu/prop_9.vnnlib,timeout,116
+benchmarks/acasxu/ACASXU_run2a_4_5_batch_2000.onnx,benchmarks/acasxu/prop_10.vnnlib,timeout,116
