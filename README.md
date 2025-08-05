@@ -1,11 +1,11 @@
-FFN : Fast Falsification of Neural Networks using Property Directed Testing
+FFN: Fast Falsification of Neural Networks using Property Directed Testing
 ----------------------------------------------------------------------------
 
 A. Folder structure
    -------------------
 
    1. README
-   2. src  -- contains python source files
+   2. src  -- contains Python source files
    3. benchmarks -- contains different benchmark categories
 
       Each category mainly contains - 
@@ -16,35 +16,35 @@ A. Folder structure
 
       c) category_instance.csv files -- provide instances to be run for that category 
 
-      Format of category_instance.csv is  - ".onnx file path,.vnnlib file path,timeout"
+      Format of category_instance.csv is  - ".onnx file path,.vnnlib file path, timeout"
 
-      -- These file paths provide path for .onnx files and .vnnlib files inside the category 
+      -- These file paths provide paths for .onnx files and .vnnlib files inside the category 
 
       -- To find the absolute path of onnx files and .vnnlib files for this category - 
 
          -- need to prepend the category folder path before the paths specified in this category_instance.csv
         
 
-   4. run_single_instance.py -- script to run a single instancei, how to run is given in "C"
+   4. run_single_instance.py -- script to run a single instance, how to run is given in "C"
    5. run_all_categories.py --to run all instances from a given category, how to run us given in "C" 
-   6. Dockerfile -contains docker build and run commands as discussed below
-   7. requirements.txt -- contains dependency list those to be installed during docker build
+   6. Dockerfile -contains Docker build and run commands as discussed below
+   7. requirements.txt -- contains the dependency list to be installed during Docker build
 
-      ---To create requirements.txt according to the dependencies of FFN project -
+      ---To create requirements.txt according to the dependencies of the FFN project -
          
             pip3 install pipreqs
 
             pipreqs . --ignore benchmarks --force
-       Note : benchmark directory contains some pthoon programs which are not needed to run FFN
+       Note: the benchmark directory contains some python programs which are not needed to run FFN
   
    
 B: Getting Started
    -------------------------
-1. clone FFN repository 
+1. Clone FFN repository 
 
          git clone https://github.com/DMoumita/FFN.git
 
-2. Entering into FFN directory
+2. Entering the FFN directory
       
          cd FFN
 
@@ -61,12 +61,12 @@ B: Getting Started
   
     sudo docker run -i -t ffn_image bash
     
-   Run a script without entering in to the the shell:
+   Run a script without entering the shell:
    
     sudo docker run -i -t ffn_image python3 <run_single_instance.py> <onnx_file> <vnnlibfile> [-- resultfile resultfile] [ -- timeout timeout]
 
 
-3-b. Run without docker 
+3-b. Run without Docker 
 
 
    tested on Ubuntu 18.04 and 20.04
@@ -94,7 +94,7 @@ a.
       
  ---It evaluates "acasxu" benchmark Property 2 for network ACASXU_run2a_1_1_batch_2000.nnet
  
- ---After evaluation, result is stored in "report.txt"
+ ---After evaluation, the result is stored in "report.txt"
  
  ---timeout parameter is set as 10 sec
 
@@ -104,9 +104,9 @@ b.
 
  ---It evaluates "acasxu" benchmark Property 2 for network ACASXU_run2a_1_1_batch_2000.nnet
  
- ---After evaluation, result is stored in default result file - "out.txt"
+ ---After evaluation, the result is stored in the default result file - "out.txt"
  
- ---timeout parameter is not mentioned, 60 sec is assigned as a default value for it
+ ---timeout parameter is not mentioned, 60 seconds is assigned as a default value for it
 
 2: To run all instances of a given benchmark category (from "benchmark" folder)
    ---------------------------------------------------------------------------
@@ -122,9 +122,9 @@ a.
 
  ---It evaluates all the instances (.onnx files and .vnnlib files) from "acasxu/acasxu_instance.csv" files
  
- ---timeout value for each of the instance is mentioned in this .csv file
+ ---timeout value for each of the instances is mentioned in this .csv file
  
- ---After evaluation result is stored in report.txt
+ ---After the evaluation result is stored in report.txt
  
 
 b.
@@ -136,6 +136,4 @@ b.
  
  ---If result_file_path is not mentioned, "report_test.txt"  is considered as a default result_file_path to store the result after evaluation
 
-***Note: Since FFN has randomization, results may vary accross the runs.
-# FFN-Explainable
-# FFN-Explainable
+***Note: Since FFN has randomization, results may vary across the runs.
