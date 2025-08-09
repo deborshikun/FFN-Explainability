@@ -32,35 +32,61 @@ def onnxEval(onnxModel,inVals,inpDtype, inpShape):
    flatOut = output.flatten(flattenOrder) # check order, 'C' for row major order
    return flatOut
 
-def propCheck(inputs,specs,outputs):
-   res = "unknown"
-   i=0
-   k=0
-   flag_for_advinput_found = 0
-   'Check for each property in specs'
-   'If any property is violated, returns the inputs and outputs'
-   'If no property is violated, returns empty supersats'
-   for propMat, propRhs in specs:
+# def propCheck(inputs,specs,outputs):
+#    res = "unknown"
+#    i=0
+#    k=0
+#    flag_for_advinput_found = 0
+#    'Check for each property in specs'
+#    'If any property is violated, returns the inputs and outputs'
+#    'If no property is violated, returns empty supersats'
+#    for propMat, propRhs in specs:
+#         vec = propMat.dot(outputs)
+#         sat = np.all(vec <= propRhs)
+#         if sat:
+#           #   res = 'violated'
+#           #   print("\nProperty violated for inputs - ", inputs)
+#            supersats[i] = inputs
+#            flag_for_advinput_found = 1
+#            print("Input Space checked: ", len(list(supersats.values())) + len(list(superunsats.values())))
+#            print("Adversarial inputs found - ", list(supersats.values()))
+#            print("Number of adversarial inputs found - ", len(supersats))
+#            i += 1
+#            #return flag_for_advinput_found, supersats  # Return the adversarial inputs found
+#         else:
+#              superunsats[k] = inputs
+#              k += 1
+
+#            #return flag_for_advinput_found, supersats  # Return the adversarial inputs found
+#            #return 1
+#    return flag_for_advinput_found , supersats
+#    #return 0
+
+def propCheck(inputs, specs, outputs):
+    found_adv = False
+    adv_inputs = []
+    i = len(supersats)  # Use current length to avoid overwriting
+    k = len(superunsats)
+    
+    # Check for each property in specs
+    for propMat, propRhs in specs:
         vec = propMat.dot(outputs)
         sat = np.all(vec <= propRhs)
         if sat:
-          #   res = 'violated'
-          #   print("\nProperty violated for inputs - ", inputs)
-           supersats[i] = inputs
-           flag_for_advinput_found = 1
-           print("Input Space checked: ", len(list(supersats.values())) + len(list(superunsats.values())))
-           print("Adversarial inputs found - ", list(supersats.values()))
-           print("Number of adversarial inputs found - ", len(supersats))
-           i += 1
-           #return flag_for_advinput_found, supersats  # Return the adversarial inputs found
+            supersats[i] = inputs
+            found_adv = True
+            adv_inputs.append(inputs)
+            
+            # Print for console output
+            # print("Input Space checked: ", len(list(supersats.values())) + len(list(superunsats.values())))
+            print("Adversarial inputs found - ", [inputs])
+            # print("Number of adversarial inputs found - ", len(supersats))
+            i += 1
         else:
-             superunsats[k] = inputs
-             k += 1
+            superunsats[k] = inputs
+            k += 1
 
-           #return flag_for_advinput_found, supersats  # Return the adversarial inputs found
-           #return 1
-   return flag_for_advinput_found , supersats
-   #return 0
+    return found_adv, adv_inputs
     
 
 def learning(cpos,cneg,iRange,numInputs):
@@ -81,89 +107,169 @@ def learning(cpos,cneg,iRange,numInputs):
                    iRange[nodeSelect][1]=temp
 
 
-def makeSample(onnxModel,numInputs,inRanges,samples,specs,inpDtype, inpShape):
-    sampleInputList=[]
+# def makeSample(onnxModel,numInputs,inRanges,samples,specs,inpDtype, inpShape):
+#     sampleInputList=[]
     
-    'Generates all samples and strored in a list (sampleInputList)'
-    for k in range(numSamples):
+#     'Generates all samples and strored in a list (sampleInputList)'
+#     for k in range(numSamples):
         
-        'Checking for duplicate sample values'
-        'If duplicate found, generates another sample value'
-        'This checking is done for 5 times with a hope that it will generate a new one within these 5 times'
-        j=0
-        while (j<5):
-            inValues=[]
-            for i in range(numInputs):
-                inValues.append(round(random.uniform(inRanges[i][0],inRanges[i][1]),6))
+#         'Checking for duplicate sample values'
+#         'If duplicate found, generates another sample value'
+#         'This checking is done for 5 times with a hope that it will generate a new one within these 5 times'
+#         j=0
+#         while (j<5):
+#             inValues=[]
+#             for i in range(numInputs):
+#                 inValues.append(round(random.uniform(inRanges[i][0],inRanges[i][1]),6))
 
-            '''Check for "Duplicate" samples
-               If new samples are in sampleInputList then continues to get other samples
-            '''
-            if ( inValues in sampleInputList):
-                #print("Duplicate")
-                j=j+1 #check needed
-            else :
+#             '''Check for "Duplicate" samples
+#                If new samples are in sampleInputList then continues to get other samples
+#             '''
+#             if ( inValues in sampleInputList):
+#                 #print("Duplicate")
+#                 j=j+1 #check needed
+#             else :
+#                 break
+#         sampleInputList.append(inValues)
+
+#         #onnx model evaluaion with new sampled inputs
+#         sampleVal=onnxEval(onnxModel,inValues,inpDtype, inpShape)
+#         #checking property with onnx evaluation outputs
+#         retVal,advinps=propCheck(inValues,specs,sampleVal)
+
+#         if retVal == 1: #Adversarial found
+#             return 1 , advinps
+#             #return 1
+        
+#         s = []
+#         s.append(inValues)
+#         s.append(sampleVal)
+#         samples.append(s)
+#     return 0 , 0 #No adversarial found
+#     #return 0
+
+# I continue sampling until I find an adversarial input or exhaust the sampling attempts
+def makeSample(onnxModel, numInputs, inRanges, samples, specs, inpDtype, inpShape):
+    sampleInputList = []
+    all_adv_inputs = []
+    
+    # Generates all samples and stores in a list (sampleInputList)
+    for k in range(numSamples):
+        # Checking for duplicate sample values
+        j = 0
+        while (j < 5):
+            inValues = []
+            for i in range(numInputs):
+                inValues.append(round(random.uniform(inRanges[i][0], inRanges[i][1]), 6))
+
+            # Check for "Duplicate" samples
+            if (inValues in sampleInputList):
+                j = j + 1
+            else:
                 break
         sampleInputList.append(inValues)
 
-        #onnx model evaluaion with new sampled inputs
-        sampleVal=onnxEval(onnxModel,inValues,inpDtype, inpShape)
-        #checking property with onnx evaluation outputs
-        retVal,advinps=propCheck(inValues,specs,sampleVal)
-
-        if retVal == 1: #Adversarial found
-            return 1 , advinps
-            #return 1
+        # onnx model evaluation with new sampled inputs
+        sampleVal = onnxEval(onnxModel, inValues, inpDtype, inpShape)
+        
+        # checking property with onnx evaluation outputs
+        found_adv, adv_inputs = propCheck(inValues, specs, sampleVal)
+        
+        if found_adv:
+            # Collect adversarial inputs but continue sampling
+            all_adv_inputs.extend(adv_inputs)
         
         s = []
         s.append(inValues)
         s.append(sampleVal)
         samples.append(s)
-    return 0 , 0 #No adversarial found
-    #return 0
+    
+    # Return if we found any adversarial inputs and the list of all found
+    return len(all_adv_inputs) > 0, all_adv_inputs
+
+# def runSample(onnxModel, numInputs, numOutputs, inputRange, tAndOT, spec, inpDtype, inpShape):
+#     oldPosSamples = []
+#     target = tAndOT[0]
+#     objectiveType = tAndOT[1]
+#     all_advinps = []
+
+#     'Run FFN for numRuns'
+#     for k in range(numRuns):
+#         samples = []
+#         posSamples = []
+#         negSamples = []
+
+#         ret, advinps = makeSample(onnxModel, numInputs, inputRange, samples, spec, inpDtype, inpShape)
+
+#         # If adversarial inputs found, accumulate them
+#         if ret == 1 and advinps:
+#             # advinps is a dict, get all values
+#             all_advinps.extend(list(advinps.values()))
+
+#         'Segregate sample list into psitive and negative samples according to the objective type found'
+#         if ( objectiveType == 1) :
+#            checkAndSegregateSamplesForMinimization(posSamples,negSamples,samples,oldPosSamples,target)
+#         else:
+#            checkAndSegregateSamplesForMaximization(posSamples,negSamples,samples,oldPosSamples,target)
+#         oldPosSamples = posSamples
+
+#         'Check input ranges for further sampling'
+#         'Discontinues if all the input ranges are below a theshold value(0.000001)'
+#         flag = False
+#         for i in range(numInputs):
+#             if ( inputRange[i][1] - inputRange[i][0] > 0.000001):
+#                flag = True
+#                break
+
+#         if( flag == False):
+#            #print("!!! No further sampling Possible for this iteration!!!")
+#            #print("Inputs are now :: ", inputRange)
+#            #print("STATUS :: unknown")
+#            return "unknown", all_advinps
+
+#         learning(posSamples,negSamples,inputRange,numInputs)
+#     return "timeout", all_advinps
 
 def runSample(onnxModel, numInputs, numOutputs, inputRange, tAndOT, spec, inpDtype, inpShape):
     oldPosSamples = []
     target = tAndOT[0]
     objectiveType = tAndOT[1]
     all_advinps = []
+    found_adv = False
 
-    'Run FFN for numRuns'
+    # Run FFN for numRuns
     for k in range(numRuns):
         samples = []
         posSamples = []
         negSamples = []
 
         ret, advinps = makeSample(onnxModel, numInputs, inputRange, samples, spec, inpDtype, inpShape)
-
+        
         # If adversarial inputs found, accumulate them
-        if ret == 1 and advinps:
-            # advinps is a dict, get all values
-            all_advinps.extend(list(advinps.values()))
+        if ret and advinps:
+            found_adv = True
+            all_advinps.extend(advinps)
 
-        'Segregate sample list into psitive and negative samples according to the objective type found'
-        if ( objectiveType == 1) :
-           checkAndSegregateSamplesForMinimization(posSamples,negSamples,samples,oldPosSamples,target)
+        # Segregate sample list into positive and negative samples
+        if (objectiveType == 1):
+           checkAndSegregateSamplesForMinimization(posSamples, negSamples, samples, oldPosSamples, target)
         else:
-           checkAndSegregateSamplesForMaximization(posSamples,negSamples,samples,oldPosSamples,target)
+           checkAndSegregateSamplesForMaximization(posSamples, negSamples, samples, oldPosSamples, target)
         oldPosSamples = posSamples
 
-        'Check input ranges for further sampling'
-        'Discontinues if all the input ranges are below a theshold value(0.000001)'
+        # Check if further sampling is possible
         flag = False
         for i in range(numInputs):
-            if ( inputRange[i][1] - inputRange[i][0] > 0.000001):
+            if (inputRange[i][1] - inputRange[i][0] > 0.000001):
                flag = True
                break
 
-        if( flag == False):
-           #print("!!! No further sampling Possible for this iteration!!!")
-           #print("Inputs are now :: ", inputRange)
-           #print("STATUS :: unknown")
-           return "unknown", all_advinps
+        if (flag == False):
+           return "unknown" if not found_adv else "violated", all_advinps
 
-        learning(posSamples,negSamples,inputRange,numInputs)
-    return "timeout", all_advinps
+        learning(posSamples, negSamples, inputRange, numInputs)
+    
+    return "timeout" if not found_adv else "violated", all_advinps
 
 
 #SampleEval function

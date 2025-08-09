@@ -16,5 +16,5 @@ if not timeoutval:
 
 i = 0
 while i < 2:
-    os.system(f"python3 {single} -m {onnx_path} -p {prop_path} -o {onnx_name}__{prop_name}__Loop{i}.txt -t {timeoutval}")
+    os.system(f"python {single} -m {onnx_path} -p {prop_path} -o {onnx_name}__{prop_name}__Loop{i}.txt -t {timeoutval}")
     i += 1

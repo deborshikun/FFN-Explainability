@@ -1,63 +1,87 @@
 import sys
 import time
-import signal
+import signal_windows as signal #modified for windows
 import argparse
 
-from src.FFNEvaluation import sampleEval
+from src.FFNEvaluation import sampleEval, supersats, superunsats
+
+# Global variable for timeout
+system_timeout = 60.0  # Default value
 
 # Register an handler for the timeout
 def handler(signum, frame):
     raise Exception("")#kill running :: Timeout occurs")
 
-def runSingleInstanceForAllCategory(onnxFile,vnnlibFile,timeout):
+def runSingleInstanceForAllCategory(onnxFile, vnnlibFile, timeout_val):
    'called from run_all_catergory.py'
-
-   # Register the signal function handler
-   signal.signal(signal.SIGALRM, handler)
-
-   # Define a timeout for "runSingleInstance"
-   signal.alarm(int(timeout))
-
-   '"runSingleInstance" will continue until any adversarial found or timeout occurs'
-   'When timeout occurs codes written within exception will be executed'
+   
+   # Use a local timeout value
+   local_timeout = float(timeout_val)
+   
    try:
-       retStatus = runSingleInstance(onnxFile,vnnlibFile)
+       retStatus = runSingleInstance(onnxFile, vnnlibFile, local_timeout)
        return retStatus
    except Exception as exc:
-       #printStr = "timeout," + str(timeout) + "\n" 
        print(exc)
+       return "timeout," + str(local_timeout) + "\n"
 
-def runSingleInstance(onnxFile,vnnlibFile):
-   #Variable Initialization
+def runSingleInstance(onnxFile, vnnlibFile, timeout_duration=None):
+   # If no timeout provided, use the system default
+   if timeout_duration is None:
+       timeout_duration = system_timeout
+   
+   # Variable Initialization
    startTime = time.time()
-
+   all_adv_inputs = []
+   
    onnxFileName = onnxFile.split('/')[-1]
    vnnFileName = vnnlibFile.split('/')[-1]
-
-   print(f"\nTesting network model {onnxFileName} for property file {vnnFileName}")
-
-   'Calling sampleEval until any adversarial found or timout ocuurs'
-   while(1):
-       status, adv_input = sampleEval(onnxFile,vnnlibFile)
-       endTime = time.time()
-       timeElapsed = endTime - startTime
-       #print("Time elapsed: ",timeElapsed)
-
-       if (status == "violated"):
-          resultStr = status+", "+str(round(timeElapsed,4)+", adv_input: \t+" + str(adv_input)+"\n")
-          #return resultStr
-    
-   resultStr = "timeout,"+str(round(timeElapsed,4)) + "\n"
-   return resultStr
+   
+   # Calculate end time based on provided timeout
+   end_time = startTime + float(timeout_duration)
+   
+   # print(f"\nTesting network model {onnxFileName} for property file {vnnFileName}")
+   
+   # Run until the full timeout period is used
+   iteration = 0
+   while time.time() < end_time:
+       iteration += 1
+      #  print(f"Starting iteration {iteration}, remaining time: {end_time - time.time():.2f}s")
+       
+       # Call sampleEval to find adversarial inputs
+       status, adv_inputs = sampleEval(onnxFile, vnnlibFile)
+       
+       # Add any found adversarial inputs to our collection
+       if adv_inputs and len(adv_inputs) > 0:
+           for inp in adv_inputs:
+               if inp not in all_adv_inputs:
+                   all_adv_inputs.append(inp)
+                  #  print(f"Found new adversarial input: {inp}")
+   
+   # Calculate total time used
+   timeElapsed = time.time() - startTime
+   
+   # Prepare result string
+   result = "" #f"Testing network model {onnxFileName} for property file {vnnFileName}\n"
+   
+   if all_adv_inputs:
+       result += f"Status: violated\n"
+      #  result += f"Time elapsed: {timeElapsed:.4f} seconds\n"
+      #  result += f"Total iterations completed: {iteration}\n"
+      #  result += f"Input Space checked: {len(supersats) + len(superunsats)}\n"
+       result += f"Adversarial inputs found: {all_adv_inputs}\n"
+   else:
+       result += f"Status: timeout\n"
+      #  result += f"Time elapsed: {timeElapsed:.4f} seconds\n"
+      #  result += f"Total iterations completed: {iteration}\n"
+   
+   return result
 
 
 #Main function
 if __name__ == '__main__':
-
-   #Commandline arguments processing
-
-   # Instantiate the parser
-   parser = argparse.ArgumentParser(description='Optional app description')
+   # Parse arguments
+   parser = argparse.ArgumentParser()
 
    # Required onnx file path 
    parser.add_argument('-m',
@@ -101,36 +125,38 @@ if __name__ == '__main__':
    else:
       print("\nOutput will be written in - \"{0}\"".format(resultFile))
 
-   timeout = args.t
+   timeout_arg = args.t
 
    'Set default for timeout if no timeout value is provided in the commandline'
    'It is an optional parameter'
-   if ( timeout is None ):
+   if (timeout_arg is None):
       print ("\n!!! timeout is not on the command line!")
       print ("Default timeout is set as - 60 sec")
-      timeout = 60.0
+      cmd_timeout = 60.0
    else:
-      print ("\ntimeout is  - {0} sec".format(timeout))
-
+      print ("\ntimeout is  - {0} sec".format(timeout_arg))
+      cmd_timeout = float(timeout_arg)
 
    # Register the signal function handler
    signal.signal(signal.SIGALRM, handler)
 
    # Define a timeout for "runSingleInstance"
-   signal.alarm(int(timeout))
+   signal.alarm(int(cmd_timeout))
    
    '"runSingleInstance" will continue until any adversarial found or timeout occurs'
    'When timeout occurs codes written within exception will be executed'
    outFile = open(resultFile, "w")
    try:
-       retStatus = runSingleInstance(onnxFile,vnnlibFile)
-       print("\nOutput is written in - \"{0}\"".format(resultFile))
+       # Run for the full timeout period
+       retStatus = runSingleInstance(onnxFile, vnnlibFile, cmd_timeout)
        
-   except Exception as exc:
+       # Write results to file
+       outFile.write(retStatus)
        print("\nOutput is written in - \"{0}\"".format(resultFile))
-       retStatus = "timeout," + str(timeout) + "\n" 
-       print("\n!!! Timeout occurred after {0} seconds".format(timeout))
+   except Exception as exc:
        print(exc)
-
-   outFile.write(retStatus)
+       outFile.write("timeout," + str(cmd_timeout) + "\n")
+       print("\nOutput is written in - \"{0}\"".format(resultFile))
+       print("\n!!! Timeout occurred after {0} seconds".format(cmd_timeout))
+   
    outFile.close()
